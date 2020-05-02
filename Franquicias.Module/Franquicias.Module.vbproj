@@ -147,12 +147,24 @@
     <Reference Include="System.Xml.Linq">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="System"><Private>False</Private></Reference>
-    <Reference Include="System.Data"><Private>False</Private></Reference>
-    <Reference Include="System.Drawing"><Private>False</Private></Reference>
-    <Reference Include="System.Xml"><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Franquiciado.vb" />
+    <Compile Include="BusinessObjects\Local.vb" />
+    <Compile Include="BusinessObjects\nofuniciona.vb" />
+    <Compile Include="BusinessObjects\Publicidad.vb" />
     <Compile Include="DatabaseUpdate\Updater.vb" />
     <Compile Include="Module.vb">
       <SubType>Component</SubType>
@@ -164,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="My Project\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BusinessObjects\ReadMe.txt" />
