@@ -1,8 +1,29 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Franquicias">
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="19.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="19.1.6.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <DetailView Id="OrdenPublicidad_DetailView">
+      <Items>
+        <PropertyEditor Id="Local" PropertyName="Local" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="OrdenPublicidad" RelativeSize="100">
+              <LayoutItem Id="IdOrdenPublicidad" RelativeSize="8.37696335078534" />
+              <LayoutItem Id="Local" ViewItem="Local" Index="1" RelativeSize="6.2827225130890056" IsNewNode="True" />
+              <LayoutItem Id="Nombre" Index="2" RelativeSize="6.2827225130890056" />
+              <LayoutItem Id="Material" Index="3" RelativeSize="79.057591623036643" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

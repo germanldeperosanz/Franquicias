@@ -161,10 +161,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\Franquiciado.vb" />
-    <Compile Include="BusinessObjects\Local.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\DatoFacturacion.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\Factura.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\Franquiciado.vb" />
+    <Compile Include="BusinessObjects\IFranquiciado.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\Local.vb" />
     <Compile Include="BusinessObjects\nofuniciona.vb" />
-    <Compile Include="BusinessObjects\Publicidad.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\Material.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\Pago.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\OrdenPublicidad.vb" />
+    <Compile Include="BusinessObjects\TablasEntidades\x.vb" />
+    <Compile Include="BusinessObjects\TablasFacturacion\FormaPago.vb" />
+    <Compile Include="BusinessObjects\TablasFacturacion\Provincia.vb" />
+    <Compile Include="BusinessObjects\TablasFacturacion\TipoIva.vb" />
+    <Compile Include="BusinessObjects\TablasFacturacion\TipoReferencia.vb" />
+    <Compile Include="Controllers\vctrFiltroFranquiciado.Designer.vb">
+      <DependentUpon>vctrFiltroFranquiciado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\vctrFiltroFranquiciado.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.vb" />
     <Compile Include="Module.vb">
       <SubType>Component</SubType>
@@ -201,6 +217,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
