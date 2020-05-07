@@ -3,6 +3,7 @@ Imports DevExpress.Persistent.Base
 Imports System.ComponentModel
 Imports DevExpress.Persistent.Validation
 Imports DevExpress.ExpressApp.ConditionalAppearance
+Imports DevExpress.ExpressApp
 
 '<DefaultClassOptions()>
 <DefaultProperty("Domicilio")>
@@ -150,17 +151,31 @@ Public Class DatoFacturacion
         End Set
     End Property
 
-    Private _Factura As Factura
+    Private _Local As Local
     <VisibleInDetailView(True)>
     <VisibleInListView(True)>
-    Public Property Factura() As Factura
+    Public Property Local() As Local
         Get
-            Return _Factura
+            Return _Local
         End Get
-        Set(ByVal value As Factura)
-            SetPropertyValue(Of Factura)("Factura", _Factura, value)
+        Set(ByVal value As Local)
+            SetPropertyValue(Of Local)("Local", _Local, value)
         End Set
     End Property
+
+
+
+    'Private _Factura As Factura
+    '<VisibleInDetailView(True)>
+    '<VisibleInListView(True)>
+    'Public Property Factura() As Factura
+    '    Get
+    '        Return _Factura
+    '    End Get
+    '    Set(ByVal value As Factura)
+    '        SetPropertyValue(Of Factura)("Factura", _Factura, value)
+    '    End Set
+    'End Property
 #End Region
 
 #Region "Propiedades de CBU"
@@ -236,7 +251,9 @@ Public Class DatoFacturacion
     End Sub
     Public Overrides Sub AfterConstruction()
         MyBase.AfterConstruction()
-        ' Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+        If SecuritySystem.CurrentUserName <> "Admin" And IsNothing(Me.Franquiciado) Then
+            Me.Franquiciado = Session.GetObjectByKey(Of Franquiciado)(SecuritySystem.CurrentUserId)
+        End If
     End Sub
 #End Region
 

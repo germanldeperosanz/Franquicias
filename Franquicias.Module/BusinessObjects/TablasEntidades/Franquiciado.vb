@@ -44,12 +44,6 @@ Public Class Franquiciado
         End Get
     End Property
 
-    <Association("Franquiciado-DatoFacturacion"), DevExpress.Xpo.Aggregated()>
-    Public ReadOnly Property DatosFacturacion() As XPCollection(Of DatoFacturacion)
-        Get
-            Return GetCollection(Of DatoFacturacion)("DatosFacturacion")
-        End Get
-    End Property
 #End Region
 
 #Region "Eventos"
